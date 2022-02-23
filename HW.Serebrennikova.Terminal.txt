@@ -1,0 +1,86 @@
+Первое ДЗ 
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я
+pwd
+
+2) Создать папку
+mkdir hw_1
+
+3) Зайти в папку
+cd hw_1
+
+4) Создать 3 папки
+mkdir hw1 hw2 hw3
+
+5) Зайти в любую папку
+cd hw1
+
+6) Создать 5 файлов (3 txt, 2 json)
+touch jhw.json jhw2.json hw3.txt hw4.txt hw5.txt
+
+7) Создать 3 папки
+mkdir hw4 hw5 hw6
+
+8. Вывести список содержимого папки
+ls -la
+
+9) + Открыть любой txt файл
+vim hw3
+
+10) + написать туда что-нибудь, любой текст
+press "i" then type "first try"
+
+11) + сохранить и выйти
+press "esc" then type ":wq"
+
+12) Выйти из папки на уровень выше
+cd ..
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку
+cd hw1
+mv jhw.json hw4
+mv jhw2.json hw4
+
+или mv jhw.json jhw2.json hw4 
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку
+cp hw3.txt hw4.txt hw5
+
+15) Найти файл по имени
+find -name hw3.txt
+
+16) просмотреть содержимое в реальном времени 
+tail -f hw4.txt
+
+17) вывести несколько первых строк из текстового файла
+head -3 hw4.txt
+
+18) вывести несколько последних строк из текстового файла
+tail -3 hw4.txt
+
+19) просмотреть содержимое длинного файла 
+less hw4.txt
+
+20) вывести дату и время
+date
+
+Задание *
+1) Отправить http запрос на сервер.
+curl "http://162.55.220.72:5005/terminal-hw-request"
+
+curl "http://162.55.220.72:5005/terminal-hw-request"
+curl "http://162.55.220.72:5005/get_method?name=Kristina&age=24"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+#!/bin/bash
+cd ..
+cd hw8
+mkdir hw10 hw11 hw12
+cd hw10
+touch jhw.json jhw2.json hw12.txt hw13.txt hw14.txt
+mkdir hw10 hw11 hw12
+ls -la
+mv jhw.json jhw2.json hw10
+echo "done"

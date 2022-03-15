@@ -1,0 +1,87 @@
+Первое ДЗ  (HW1)
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я
+(Show what the working (current) directory is used at the moment):
+pwd
+
+2) Создать папку (Create a folder):
+mkdir hw_1
+
+3) Зайти в папку (Go to the folder):
+cd hw_1
+
+4) Создать 3 папки (Create three folders):
+mkdir hw1 hw2 hw3
+
+5) Зайти в любую папку (Go to any folder):
+cd hw1
+
+6) Создать 5 файлов:3 txt, 2 json (Create five files):
+touch jhw.json jhw2.json hw3.txt hw4.txt hw5.txt
+
+7) Создать 3 папки (Create three folders):
+mkdir hw4 hw5 hw6
+
+8. Вывести список содержимого папки (Output a list of folder contents):
+ls -la
+
+9) + Открыть любой txt файл (+Open any txt file):
+vim hw3
+
+10) + написать туда что-нибудь, любой текст (+write something there, any text):
+press "i" then type "first try"
+
+11) + сохранить и выйти (save and exit):
+press "esc" then type ":wq"
+
+12) Выйти из папки на уровень выше (Exit the folder to a higher level):
+cd ..
+
+13) Переместить любые 2 файла, которые вы создали, в любую другую папку (move any two files you have created to any other folder):
+cd hw1
+mv jhw.json hw4
+mv jhw2.json hw4
+
+или (or) mv jhw.json jhw2.json hw4 
+
+14) Скопировать любые 2 файла, которые вы создали, в любую другую папку (Copy any two files you have created to any other folder):
+cp hw3.txt hw4.txt hw5
+
+15) Найти файл по имени (Find a file by name):
+find -name hw3.txt
+
+16) Просмотреть содержимое в реальном времени (View the content in real time):
+tail -f hw4.txt
+
+17) Вывести несколько первых строк из текстового файла (Output the first few lines from a text file):
+head -3 hw4.txt
+
+18) Вывести несколько последних строк из текстового файла (Output the last few lines from a text file):
+tail -3 hw4.txt
+
+19) Просмотреть содержимое длинного файла (View the contents of a long file):
+less hw4.txt
+
+20) Вывести дату и время (Print date and time):
+date
+
+Задание *
+1) Отправить http запрос на сервер (Send an http request to the server):
+curl "http://162.55.220.72:5005/terminal-hw-request"
+
+curl "http://162.55.220.72:5005/terminal-hw-request"
+curl "http://162.55.220.72:5005/get_method?name=Kristina&age=24"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13 (Write a script that will automatically execute the items 3, 4, 5, 6, 7, 8, 13):
+
+#!/bin/bash
+cd ..
+cd hw8
+mkdir hw10 hw11 hw12
+cd hw10
+touch jhw.json jhw2.json hw12.txt hw13.txt hw14.txt
+mkdir hw10 hw11 hw12
+ls -la
+mv jhw.json jhw2.json hw10
+echo "done"
